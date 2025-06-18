@@ -1,9 +1,9 @@
+'use client';
+import React from 'react';
 import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Gallery from "../sections/Gallery";
-import WhyChooseUs from "../sections/WhyChooseUs";
-import Process from "../sections/Process";
 import Testimonials from "../sections/Testimonials";
 import Contact from "../sections/Contact";
 
@@ -135,12 +135,6 @@ export default function Home() {
       {/* Gallery Section */}
       <Gallery />
 
-      {/* Why Choose Us Section */}
-      <WhyChooseUs />
-
-      {/* Process Section */}
-      <Process />
-
       {/* Testimonials Section */}
       <Testimonials />
 
@@ -151,4 +145,4 @@ export default function Home() {
       <Footer />
     </div>
   );
-}
+} 
