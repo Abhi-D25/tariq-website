@@ -64,7 +64,7 @@ function BeforeAfterHover({ before, after, title }: { before: string; after: str
       aria-label={`Before and after of ${title}`}
     >
       <Image src={before} alt={title + ' before'} fill className="object-cover w-full h-full transition-opacity duration-500" />
-      <span className="label absolute top-2 left-2 bg-primary text-warmwhite text-xs px-2 py-1 rounded font-semibold shadow z-10">BEFORE</span>
+      <span className={`label absolute top-2 left-2 bg-primary text-warmwhite text-xs px-2 py-1 rounded font-semibold shadow z-10 transition-opacity duration-500 ${hovered ? 'opacity-0' : 'opacity-100'}`}>BEFORE</span>
       <Image
         src={after}
         alt={title + ' after'}

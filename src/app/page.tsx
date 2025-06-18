@@ -22,21 +22,25 @@ export default function Home() {
           <p className="hero-subtitle text-xl md:text-2xl text-warmwhite mb-8">Cedar Park's premier destination for luxury kitchen & bathroom renovations</p>
           <div className="hero-cta-group flex gap-4">
             <button className="primary-btn bg-primary text-warmwhite px-6 py-3 rounded-full font-semibold shadow hover:bg-gold hover:text-charcoal transition">Start Your Transformation</button>
-            <button className="secondary-btn bg-warmwhite text-primary px-6 py-3 rounded-full font-semibold border border-primary hover:bg-gold hover:text-charcoal transition">View Our Gallery</button>
+            <button className="secondary-btn bg-primary text-warmwhite px-6 py-3 rounded-full font-semibold hover:bg-gold hover:text-charcoal transition">View Our Gallery</button>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
       <section id="services" className="services-section py-20 bg-lightgray">
-        <div className="container mx-auto px-4">
-          <h2 className="section-title">Complete Remodeling Solutions</h2>
+        <div className="container mx-auto px-4 mt-12 max-w-4xl">
+          <h2 className="section-title text-center">Complete Remodeling Solutions</h2>
+          <p className="text-center text-lg mt-8 text-charcoal/80">
+            With over 15 years of experience in Cedar Park, Tariq has built a reputation for excellence in premium tile installation and home remodeling. 
+            His attention to detail and commitment to quality craftsmanship has transformed countless homes, creating beautiful, functional spaces that exceed expectations.
+          </p>
           <div className="services-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
             {/* Service 1 */}
-            <div className="service-card relative rounded-xl overflow-hidden shadow-lg group">
-              <Image src="/images/premium-tile-display.jpg" alt="Premium tile selection" fill className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" />
-              <div className="absolute inset-0 bg-burgundyoverlay flex flex-col justify-end p-6">
-                <div className="service-content text-warmwhite">
+            <div className="service-card relative rounded-xl overflow-hidden shadow-lg group hover-lift">
+              <Image src="/images/premium-tile-display.jpg" alt="Premium tile selection" fill className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out" />
+              <div className="absolute inset-0 bg-burgundyoverlay flex flex-col justify-end p-6 transform transition-transform duration-500 group-hover:translate-y-0 translate-y-[60%]">
+                <div className="service-content text-warmwhite transform transition-all duration-500 group-hover:translate-y-0 translate-y-4">
                   <h3 className="text-xl font-bold mb-2">Premium Tile Selection</h3>
                   <p className="mb-2">Ceramic, porcelain, natural stone, and luxury vinyl from top brands</p>
                   <ul className="mb-4 text-sm list-disc list-inside opacity-90">
@@ -45,15 +49,15 @@ export default function Home() {
                     <li>Designer mosaic collections</li>
                     <li>Wood-look luxury vinyl</li>
                   </ul>
-                  <button className="service-btn bg-gold text-charcoal px-4 py-2 rounded-full font-semibold hover:bg-primary hover:text-warmwhite transition">Explore Tiles</button>
+                  <button className="service-btn bg-gold text-charcoal px-4 py-2 rounded-full font-semibold hover:bg-primary hover:text-warmwhite transition-all duration-300 transform hover:scale-105">Explore Tiles</button>
                 </div>
               </div>
             </div>
             {/* Service 2 */}
-            <div className="service-card relative rounded-xl overflow-hidden shadow-lg group">
-              <Image src="/images/modern-kitchen-renovation.jpg" alt="Kitchen remodeling" fill className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" />
-              <div className="absolute inset-0 bg-burgundyoverlay flex flex-col justify-end p-6">
-                <div className="service-content text-warmwhite">
+            <div className="service-card relative rounded-xl overflow-hidden shadow-lg group hover-lift">
+              <Image src="/images/modern-kitchen-renovation.jpg" alt="Kitchen remodeling" fill className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out" />
+              <div className="absolute inset-0 bg-burgundyoverlay flex flex-col justify-end p-6 transform transition-transform duration-500 group-hover:translate-y-0 translate-y-[60%]">
+                <div className="service-content text-warmwhite transform transition-all duration-500 group-hover:translate-y-0 translate-y-4">
                   <h3 className="text-xl font-bold mb-2">Kitchen Remodeling</h3>
                   <p className="mb-2">Complete kitchen transformations from concept to completion</p>
                   <ul className="mb-4 text-sm list-disc list-inside opacity-90">
@@ -62,15 +66,15 @@ export default function Home() {
                     <li>Full kitchen renovations</li>
                     <li>Cabinet & flooring updates</li>
                   </ul>
-                  <button className="service-btn bg-gold text-charcoal px-4 py-2 rounded-full font-semibold hover:bg-primary hover:text-warmwhite transition">View Kitchens</button>
+                  <button className="service-btn bg-gold text-charcoal px-4 py-2 rounded-full font-semibold hover:bg-primary hover:text-warmwhite transition-all duration-300 transform hover:scale-105">View Kitchens</button>
                 </div>
               </div>
             </div>
             {/* Service 3 */}
-            <div className="service-card relative rounded-xl overflow-hidden shadow-lg group">
-              <Image src="/images/luxury-bathroom-renovation.jpg" alt="Bathroom renovation" fill className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" />
-              <div className="absolute inset-0 bg-burgundyoverlay flex flex-col justify-end p-6">
-                <div className="service-content text-warmwhite">
+            <div className="service-card relative rounded-xl overflow-hidden shadow-lg group hover-lift">
+              <Image src="/images/luxury-bathroom-renovation.jpg" alt="Bathroom renovation" fill className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out" />
+              <div className="absolute inset-0 bg-burgundyoverlay flex flex-col justify-end p-6 transform transition-transform duration-500 group-hover:translate-y-0 translate-y-[60%]">
+                <div className="service-content text-warmwhite transform transition-all duration-500 group-hover:translate-y-0 translate-y-4">
                   <h3 className="text-xl font-bold mb-2">Bathroom Renovations</h3>
                   <p className="mb-2">Spa-like bathroom makeovers with premium materials</p>
                   <ul className="mb-4 text-sm list-disc list-inside opacity-90">
@@ -79,15 +83,15 @@ export default function Home() {
                     <li>Heated floor systems</li>
                     <li>Complete bathroom remodels</li>
                   </ul>
-                  <button className="service-btn bg-gold text-charcoal px-4 py-2 rounded-full font-semibold hover:bg-primary hover:text-warmwhite transition">View Bathrooms</button>
+                  <button className="service-btn bg-gold text-charcoal px-4 py-2 rounded-full font-semibold hover:bg-primary hover:text-warmwhite transition-all duration-300 transform hover:scale-105">View Bathrooms</button>
                 </div>
               </div>
             </div>
             {/* Service 4 */}
-            <div className="service-card relative rounded-xl overflow-hidden shadow-lg group">
-              <Image src="/images/design-consultation.jpg" alt="Design consultation" fill className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" />
-              <div className="absolute inset-0 bg-burgundyoverlay flex flex-col justify-end p-6">
-                <div className="service-content text-warmwhite">
+            <div className="service-card relative rounded-xl overflow-hidden shadow-lg group hover-lift">
+              <Image src="/images/design-consultation.jpg" alt="Design consultation" fill className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out" />
+              <div className="absolute inset-0 bg-burgundyoverlay flex flex-col justify-end p-6 transform transition-transform duration-500 group-hover:translate-y-0 translate-y-[60%]">
+                <div className="service-content text-warmwhite transform transition-all duration-500 group-hover:translate-y-0 translate-y-4">
                   <h3 className="text-xl font-bold mb-2">Expert Design Consultation</h3>
                   <p className="mb-2">Professional guidance from planning to installation</p>
                   <ul className="mb-4 text-sm list-disc list-inside opacity-90">
@@ -96,9 +100,33 @@ export default function Home() {
                     <li>3D visualization</li>
                     <li>Project timeline planning</li>
                   </ul>
-                  <button className="service-btn bg-gold text-charcoal px-4 py-2 rounded-full font-semibold hover:bg-primary hover:text-warmwhite transition">Book Consultation</button>
+                  <button className="service-btn bg-gold text-charcoal px-4 py-2 rounded-full font-semibold hover:bg-primary hover:text-warmwhite transition-all duration-300 transform hover:scale-105">Book Consultation</button>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="stats-section py-16 bg-primary">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div className="stat-item">
+              <div className="text-4xl md:text-5xl font-bold text-gold mb-2">15+</div>
+              <div className="text-warmwhite text-lg">Years Experience</div>
+            </div>
+            <div className="stat-item">
+              <div className="text-4xl md:text-5xl font-bold text-gold mb-2">500+</div>
+              <div className="text-warmwhite text-lg">Projects Completed</div>
+            </div>
+            <div className="stat-item">
+              <div className="text-4xl md:text-5xl font-bold text-gold mb-2">98%</div>
+              <div className="text-warmwhite text-lg">Client Satisfaction</div>
+            </div>
+            <div className="stat-item">
+              <div className="text-4xl md:text-5xl font-bold text-gold mb-2">100%</div>
+              <div className="text-warmwhite text-lg">Licensed & Insured</div>
             </div>
           </div>
         </div>
