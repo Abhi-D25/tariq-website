@@ -45,6 +45,12 @@ export default function Gallery() {
               </div>
             ))}
           </div>
+          {/* CTA Button */}
+          <div className="mt-12 text-center">
+            <button className="bg-primary hover:bg-primary/90 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg text-lg">
+              Transform Now
+            </button>
+          </div>
         </div>
       </div>
     </section>

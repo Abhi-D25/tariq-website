@@ -61,12 +61,19 @@ export default function TileTypes() {
   return (
     <section id="tile-types" className="tile-types-section relative py-20 animate-fade-in flex justify-center">
       <div className="relative w-full max-w-6xl">
+        {/* Header Section */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+            Tile Collection
+          </h2>
+          <p className="text-xl text-charcoal font-semibold max-w-3xl mx-auto leading-relaxed">
+            Discover our extensive range of premium tiles and finishes, carefully curated to transform your space with elegance and durability
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Premium Tile Collections */}
-          <div className="relative rounded-3xl overflow-hidden shadow-xl">
-            <div className="absolute inset-0 w-full h-full">
-              <div className="absolute inset-0 bg-darkoverlay" />
-            </div>
+          <div className="relative rounded-3xl overflow-hidden shadow-xl" style={{ background: 'linear-gradient(90deg, #2C2C2C 60%, #8B1538 100%)' }}>
             <div className="relative z-10 p-8">
               <h3 className="text-2xl font-bold text-warmwhite mb-6">Premium Tile Collections</h3>
               <div className="space-y-6">
@@ -89,14 +96,17 @@ export default function TileTypes() {
                   </div>
                 ))}
               </div>
+              {/* CTA Button */}
+              <div className="mt-8 text-center">
+                <button className="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
+                  See More
+                </button>
+              </div>
             </div>
           </div>
 
           {/* Tile Finishes & Styles */}
-          <div className="relative rounded-3xl overflow-hidden shadow-xl">
-            <div className="absolute inset-0 w-full h-full">
-              <div className="absolute inset-0 bg-darkoverlay" />
-            </div>
+          <div className="relative rounded-3xl overflow-hidden shadow-xl" style={{ background: 'linear-gradient(90deg, #2C2C2C 60%, #8B1538 100%)' }}>
             <div className="relative z-10 p-8">
               <h3 className="text-2xl font-bold text-warmwhite mb-6">Tile Finishes & Styles</h3>
               <div className="space-y-6">
@@ -118,6 +128,12 @@ export default function TileTypes() {
                     </div>
                   </div>
                 ))}
+              </div>
+              {/* CTA Button */}
+              <div className="mt-8 text-center">
+                <button className="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
+                  Explore Options
+                </button>
               </div>
             </div>
           </div>

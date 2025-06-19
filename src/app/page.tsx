@@ -20,19 +20,138 @@ export default function Home() {
           <div className="absolute inset-0 bg-[rgba(44,44,44,0.7)]" />
         </div>
         <div className="relative z-10 flex flex-col items-center justify-center text-center px-4">
-          <h1 className="hero-title text-4xl md:text-5xl lg:text-6xl font-bold text-warmwhite drop-shadow-lg mb-6">Transform Your Home with Premium Tile & Expert Craftsmanship</h1>
-          <p className="hero-subtitle text-xl md:text-2xl text-warmwhite mb-8">Cedar Park's premier destination for luxury kitchen & bathroom renovations</p>
-          <div className="hero-cta-group flex gap-4">
-            <button className="primary-btn bg-primary text-warmwhite px-6 py-3 rounded-full font-semibold shadow hover:bg-gold hover:text-charcoal transition">Start Your Transformation</button>
-            <button className="secondary-btn bg-primary text-warmwhite px-6 py-3 rounded-full font-semibold hover:bg-gold hover:text-charcoal transition">View Our Gallery</button>
+          <h1 className="hero-title text-4xl md:text-5xl lg:text-6xl font-bold text-warmwhite drop-shadow-lg mb-6">Transform Your Home Into Your Dream Space</h1>
+          <p className="hero-subtitle text-xl md:text-2xl text-warmwhite mb-8">Cedar Park's premier destination for luxury remodelling</p>
+          <div className="hero-cta-group flex flex-col sm:flex-row gap-4 items-center">
+            <button className="primary-btn bg-primary text-warmwhite px-8 py-4 rounded-full font-semibold shadow-lg hover:bg-gold hover:text-charcoal transition-all duration-300 transform hover:scale-105">
+              Start Your Transformation
+            </button>
+            <button className="secondary-btn bg-gold text-charcoal px-8 py-4 rounded-full font-semibold hover:bg-primary hover:text-warmwhite transition-all duration-300 transform hover:scale-105">
+              View Our Gallery
+            </button>
+            <button className="tertiary-btn border-2 border-warmwhite text-warmwhite px-8 py-4 rounded-full font-semibold hover:bg-warmwhite hover:text-charcoal transition-all duration-300 transform hover:scale-105">
+              Browse Tile Collection
+            </button>
           </div>
         </div>
       </section>
 
+      {/* Promotional Banners */}
+      <section className="promotional-banners py-16 bg-warmwhite">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* New Arrivals Banner */}
+            <div className="promo-banner relative h-64 rounded-xl overflow-hidden shadow-lg">
+              <Image src="/images/new-tiles.jpg" alt="New Arrivals" fill className="object-cover" />
+              <div className="absolute inset-0 bg-primary/80" />
+              <div className="absolute inset-0 flex flex-col justify-center items-start p-8">
+                <h3 className="text-3xl font-bold text-black mb-2">New Arrivals</h3>
+                <p className="text-gold text-lg mb-4">Latest tile collections now available</p>
+                <button className="bg-gold text-charcoal px-6 py-3 rounded-full font-semibold hover:bg-warmwhite transition-all duration-300 transform hover:scale-105">
+                  SHOP NOW
+                </button>
+              </div>
+            </div>
+
+            {/* Best Sellers Banner */}
+            <div className="promo-banner relative h-64 rounded-xl overflow-hidden shadow-lg">
+              <Image src="/images/best-sellers.jpg" alt="Best Sellers" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gold/80" />
+              <div className="absolute inset-0 flex flex-col justify-center items-start p-8">
+                <h3 className="text-3xl font-bold text-warmwhite mb-2">Best Sellers</h3>
+                <p className="text-gold text-lg mb-4">Our most popular tile selections</p>
+                <button className="bg-primary text-warmwhite px-6 py-3 rounded-full font-semibold hover:bg-charcoal transition-all duration-300 transform hover:scale-105">
+                  SHOP NOW
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Shop by Space Section */}
+      <section className="shop-by-space py-20 bg-warmwhite">
+        <div className="container mx-auto px-4">
+          <h2 className="section-title text-center mb-12">Shop by Space</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {[
+              { name: "Kitchen", image: "/images/kitchen-space.jpg" },
+              { name: "Bathroom", image: "/images/luxury-bathroom-renovation.jpg" },
+              { name: "Backsplash", image: "/images/backsplash-space.jpg" },
+              { name: "Shower", image: "/images/shower-space.jpg" },
+              { name: "Outdoor", image: "/images/outdoor-space.jpg" },
+              { name: "Flooring", image: "/images/tile-installation-process.jpg" }
+            ].map((space, index) => (
+              <div key={index} className="space-card group cursor-pointer">
+                <div className="relative h-32 w-32 mx-auto rounded-full overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105">
+                  <Image src={space.image} alt={space.name} fill className="object-cover" />
+                </div>
+                <h3 className="text-center mt-3 font-semibold text-charcoal group-hover:text-primary transition-colors">{space.name}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <Gallery />
+
+      {/* Tile Types Section */}
+      <TileTypes />
+
+      {/* Featured Collections Section */}
+      <section className="featured-collections py-16 bg-warmwhite">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* USA-Made Collection */}
+            <div className="collection-card relative h-80 rounded-xl overflow-hidden shadow-lg group">
+              <Image src="/images/usa-made.jpg" alt="USA-Made Tiles" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-darkoverlay group-hover:bg-burgundyoverlay transition-all duration-300" />
+              <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-6">
+                <h3 className="text-2xl font-bold text-warmwhite mb-2">USA-Made</h3>
+                <p className="text-warmwhite mb-4">Premium American craftsmanship</p>
+                <button className="bg-gold text-charcoal px-6 py-3 rounded-full font-semibold hover:bg-warmwhite transition-all duration-300 transform hover:scale-105">
+                  SHOP NOW
+                </button>
+              </div>
+            </div>
+
+            {/* Designer Collection */}
+            <div className="collection-card relative h-80 rounded-xl overflow-hidden shadow-lg group">
+              <Image src="/images/luxury-bathroom-renovation.jpg" alt="Designer Collection" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-darkoverlay group-hover:bg-burgundyoverlay transition-all duration-300" />
+              <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-6">
+                <h3 className="text-2xl font-bold text-warmwhite mb-2">Up to 75% Off</h3>
+                <p className="text-warmwhite mb-4">Designer tiles at unbeatable prices</p>
+                <button className="bg-gold text-charcoal px-6 py-3 rounded-full font-semibold hover:bg-warmwhite transition-all duration-300 transform hover:scale-105">
+                  SHOP NOW
+                </button>
+              </div>
+            </div>
+
+            {/* New Arrivals */}
+            <div className="collection-card relative h-80 rounded-xl overflow-hidden shadow-lg group md:col-span-2 lg:col-span-1">
+              <Image src="/images/new-arrivals-2.jpg" alt="New Arrivals" fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-darkoverlay group-hover:bg-burgundyoverlay transition-all duration-300" />
+              <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-6">
+                <h3 className="text-2xl font-bold text-warmwhite mb-2">New Arrivals</h3>
+                <p className="text-warmwhite mb-4">Latest trends in tile design</p>
+                <button className="bg-gold text-charcoal px-6 py-3 rounded-full font-semibold hover:bg-warmwhite transition-all duration-300 transform hover:scale-105">
+                  SHOP NOW
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Work Capabilities Section */}
+      <WorkCapabilities />
+
       {/* Services Section */}
-      <section id="services" className="services-section py-20 bg-altsection">
-      <div className="container mx-auto px-8 mt-12 max-w-4xl border-2 border-[#D4AF37] rounded-lg p-8 shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:shadow-[0_12px_24px_rgba(0,0,0,0.3)] transition-all duration-300 hover:-translate-y-1">
-        <h2 className="section-title text-center">Complete Remodeling Solutions</h2>
+      <section id="services" className="services-section py-20 bg-warmwhite">
+        <div className="container mx-auto px-8 mt-12 max-w-4xl border-2 border-[#D4AF37] rounded-lg p-8 shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:shadow-[0_12px_24px_rgba(0,0,0,0.3)] transition-all duration-300 hover:-translate-y-1">
+          <h2 className="section-title text-center">Complete Remodeling Solutions</h2>
           <p className="text-center text-lg text-charcoal/80 mt-6">
             With over 15 years of experience in Cedar Park, Tariq has built a reputation for excellence in premium tile installation and home remodeling. 
             His attention to detail and commitment to quality craftsmanship has transformed countless homes, creating beautiful, functional spaces that exceed expectations.
@@ -133,15 +252,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Work Capabilities Section */}
-      <WorkCapabilities />
-
-      {/* Tile Types Section */}
-      <TileTypes />
-
-      {/* Gallery Section */}
-      <Gallery />
 
       {/* Testimonials Section */}
       <Testimonials />
