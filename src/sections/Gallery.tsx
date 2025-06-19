@@ -1,6 +1,7 @@
 'use client';
 import Image from "next/image";
 import { useState } from "react";
+import { useModal } from "../context/ModalContext";
 
 const galleryItems = [
   {
@@ -24,6 +25,8 @@ const galleryItems = [
 ];
 
 export default function Gallery() {
+  const { openModal } = useModal();
+
   return (
     <section id="gallery" className="gallery-section relative py-20 animate-fade-in flex justify-center">
       <div className="relative w-full max-w-6xl rounded-3xl overflow-hidden shadow-xl">
@@ -47,7 +50,10 @@ export default function Gallery() {
           </div>
           {/* CTA Button */}
           <div className="mt-12 text-center">
-            <button className="bg-primary hover:bg-primary/90 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg text-lg">
+            <button 
+              onClick={openModal}
+              className="bg-primary hover:bg-primary/90 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg text-lg"
+            >
               Transform Now
             </button>
           </div>

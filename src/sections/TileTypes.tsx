@@ -1,5 +1,6 @@
 'use client';
 import Image from "next/image";
+import { useModal } from "../context/ModalContext";
 
 const tileCollections = [
   {
@@ -58,6 +59,8 @@ const tileFinishes = [
 ];
 
 export default function TileTypes() {
+  const { openModal } = useModal();
+
   return (
     <section id="tile-types" className="tile-types-section relative py-20 animate-fade-in flex justify-center">
       <div className="relative w-full max-w-6xl">
@@ -98,7 +101,10 @@ export default function TileTypes() {
               </div>
               {/* CTA Button */}
               <div className="mt-8 text-center">
-                <button className="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
+                <button 
+                  onClick={openModal}
+                  className="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+                >
                   See More
                 </button>
               </div>
@@ -131,7 +137,10 @@ export default function TileTypes() {
               </div>
               {/* CTA Button */}
               <div className="mt-8 text-center">
-                <button className="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
+                <button 
+                  onClick={openModal}
+                  className="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+                >
                   Explore Options
                 </button>
               </div>
