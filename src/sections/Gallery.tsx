@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { useModal } from "../context/ModalContext";
+import StaggeredAnimation from "../components/StaggeredAnimation";
 
 const galleryItems = [
   {
@@ -37,9 +38,9 @@ export default function Gallery() {
         <div className="gallery-overlay relative z-10 px-4 py-12 ml-4 mr-4">
           <h2 className="section-title text-warmwhite text-center">Stunning Transformations</h2>
           <p className="section-subtitle text-warmwhite text-center">See how we&apos;ve transformed Cedar Park homes</p>
-          <div className="before-after-grid grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+          <StaggeredAnimation animation="fade-in-up" staggerDelay={200} className="before-after-grid grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
             {galleryItems.map((item, i) => (
-              <div className="before-after-item bg-white/20 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg animate-fade-in-up" key={i}>
+              <div className="before-after-item bg-white/20 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg" key={i}>
                 <BeforeAfterHover before={item.before} after={item.after} title={item.title} />
                 <div className="project-info p-4 text-center bg-white/90 backdrop-blur-sm">
                   <h4 className="font-bold text-lg text-primary mb-1">{item.title}</h4>
@@ -47,7 +48,7 @@ export default function Gallery() {
                 </div>
               </div>
             ))}
-          </div>
+          </StaggeredAnimation>
           {/* CTA Button */}
           <div className="mt-12 text-center">
             <button 

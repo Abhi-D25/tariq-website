@@ -11,6 +11,10 @@
   --light-tan: #F5F0E6;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--light-tan);
   color: var(--charcoal);

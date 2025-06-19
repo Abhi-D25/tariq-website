@@ -1,5 +1,6 @@
 'use client';
 import Image from "next/image";
+import StaggeredAnimation from "../components/StaggeredAnimation";
 
 const capabilities = [
   {
@@ -59,7 +60,7 @@ export default function WorkCapabilities() {
         </div>
         <div className="relative z-10 p-8 md:p-12">
           <h2 className="text-3xl font-bold text-warmwhite text-center mb-8">Complete Remodeling Expertise</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <StaggeredAnimation animation="scale-in" staggerDelay={100} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {capabilities.map((capability, index) => (
               <div 
                 key={index} 
@@ -72,7 +73,7 @@ export default function WorkCapabilities() {
                 </div>
               </div>
             ))}
-          </div>
+          </StaggeredAnimation>
         </div>
       </div>
     </section>
