@@ -68,7 +68,7 @@ export default function WorkCapabilities() {
                 <div className="flex flex-col items-center text-center">
                   <span className="text-3xl mb-3">{capability.icon}</span>
                   <h3 className="text-warmwhite font-semibold mb-2">{capability.title}</h3>
-                  <p className="text-warmwhite/80 text-sm">{capability.description}</p>
+                  <p className="text-warmwhite/80 text-sm text-gold font-bold">{capability.description}</p>
                 </div>
               </div>
             ))}

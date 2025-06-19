@@ -7,7 +7,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   return (
     <header
-      className="glass-header sticky top-0 z-50 w-full animate-fade-in"
+      className="fixed top-0 z-50 w-full animate-fade-in"
       style={{ background: 'linear-gradient(90deg, #2C2C2C 60%, #8B1538 100%)', backdropFilter: 'blur(16px) saturate(180%)' }}
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-4 md:px-8">

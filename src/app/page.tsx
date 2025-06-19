@@ -30,7 +30,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="services-section py-20 bg-lightgray">
+      <section id="services" className="services-section py-20 bg-altsection">
       <div className="container mx-auto px-8 mt-12 max-w-4xl border-2 border-[#D4AF37] rounded-lg p-8 shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:shadow-[0_12px_24px_rgba(0,0,0,0.3)] transition-all duration-300 hover:-translate-y-1">
         <h2 className="section-title text-center">Complete Remodeling Solutions</h2>
           <p className="text-center text-lg text-charcoal/80 mt-6">
@@ -134,14 +134,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <Gallery />
+      {/* Work Capabilities Section */}
+      <WorkCapabilities />
 
       {/* Tile Types Section */}
       <TileTypes />
 
-      {/* Work Capabilities Section */}
-      <WorkCapabilities />
+      {/* Gallery Section */}
+      <Gallery />
 
       {/* Testimonials Section */}
       <Testimonials />

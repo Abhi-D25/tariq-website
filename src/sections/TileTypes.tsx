@@ -65,12 +65,6 @@ export default function TileTypes() {
           {/* Premium Tile Collections */}
           <div className="relative rounded-3xl overflow-hidden shadow-xl">
             <div className="absolute inset-0 w-full h-full">
-              <Image 
-                src="/images/luxury-tile-showroom.jpg" 
-                alt="Luxury tile showroom" 
-                fill 
-                className="object-cover w-full h-full"
-              />
               <div className="absolute inset-0 bg-darkoverlay" />
             </div>
             <div className="relative z-10 p-8">
@@ -101,12 +95,6 @@ export default function TileTypes() {
           {/* Tile Finishes & Styles */}
           <div className="relative rounded-3xl overflow-hidden shadow-xl">
             <div className="absolute inset-0 w-full h-full">
-              <Image 
-                src="/images/tile-textures.jpg" 
-                alt="Tile textures and finishes" 
-                fill 
-                className="object-cover w-full h-full"
-              />
               <div className="absolute inset-0 bg-darkoverlay" />
             </div>
             <div className="relative z-10 p-8">

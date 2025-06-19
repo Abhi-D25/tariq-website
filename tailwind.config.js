@@ -12,6 +12,7 @@ module.exports = {
         lightgray: '#F5F5F5',
         darkoverlay: 'rgba(44,44,44,0.7)',
         burgundyoverlay: 'rgba(139,21,56,0.8)',
+        altsection: 'rgba(255, 255, 255, 0.74)',
       },
       fontFamily: {
         sans: ['Inter', 'Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'],
