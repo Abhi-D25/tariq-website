@@ -41,26 +41,26 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* New Arrivals Banner */}
-            <div className="promo-banner relative h-64 rounded-xl overflow-hidden shadow-lg">
-              <Image src="/images/new-tiles.jpg" alt="New Arrivals" fill className="object-cover" />
-              <div className="absolute inset-0 bg-primary/80" />
+            <div className="promo-banner relative h-64 rounded-xl overflow-hidden shadow-lg group">
+              <Image src="/images/new-tiles.jpg" alt="New Arrivals" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70" />
               <div className="absolute inset-0 flex flex-col justify-center items-start p-8">
-                <h3 className="text-3xl font-bold text-black mb-2">New Arrivals</h3>
-                <p className="text-gold text-lg mb-4">Latest tile collections now available</p>
-                <button className="bg-gold text-charcoal px-6 py-3 rounded-full font-semibold hover:bg-warmwhite transition-all duration-300 transform hover:scale-105">
+                <h3 className="text-3xl font-bold text-warmwhite mb-2 drop-shadow-lg">New Arrivals</h3>
+                <p className="text-warmwhite text-lg mb-4 font-semibold drop-shadow-md">Latest tile collections now available</p>
+                <button className="bg-gold text-charcoal px-6 py-3 rounded-full font-bold hover:bg-warmwhite hover:shadow-lg transition-all duration-300 transform hover:scale-105 border-2 border-gold">
                   SHOP NOW
                 </button>
               </div>
             </div>
 
             {/* Best Sellers Banner */}
-            <div className="promo-banner relative h-64 rounded-xl overflow-hidden shadow-lg">
-              <Image src="/images/best-sellers.jpg" alt="Best Sellers" fill className="object-cover" />
-              <div className="absolute inset-0 bg-gold/80" />
+            <div className="promo-banner relative h-64 rounded-xl overflow-hidden shadow-lg group">
+              <Image src="/images/best-sellers.jpg" alt="Best Sellers" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-burgundyoverlay" />
               <div className="absolute inset-0 flex flex-col justify-center items-start p-8">
-                <h3 className="text-3xl font-bold text-warmwhite mb-2">Best Sellers</h3>
-                <p className="text-gold text-lg mb-4">Our most popular tile selections</p>
-                <button className="bg-primary text-warmwhite px-6 py-3 rounded-full font-semibold hover:bg-charcoal transition-all duration-300 transform hover:scale-105">
+                <h3 className="text-3xl font-bold text-warmwhite mb-2 drop-shadow-lg">Best Sellers</h3>
+                <p className="text-warmwhite text-lg mb-4 font-semibold drop-shadow-md">Our most popular tile selections</p>
+                <button className="bg-gold text-charcoal px-6 py-3 rounded-full font-bold hover:bg-warmwhite hover:shadow-lg transition-all duration-300 transform hover:scale-105 border-2 border-gold">
                   SHOP NOW
                 </button>
               </div>
@@ -83,10 +83,10 @@ export default function Home() {
               { name: "Flooring", image: "/images/tile-installation-process.jpg" }
             ].map((space, index) => (
               <div key={index} className="space-card group cursor-pointer">
-                <div className="relative h-32 w-32 mx-auto rounded-full overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105">
-                  <Image src={space.image} alt={space.name} fill className="object-cover" />
+                <div className="relative h-32 w-32 mx-auto rounded-full overflow-hidden shadow-lg group-hover:shadow-2xl transition-all duration-300 transform group-hover:scale-110 group-hover:-translate-y-2 border-4 border-transparent group-hover:border-gold group-hover:shadow-[0_15px_35px_rgba(44,44,44,0.4)]">
+                  <Image src={space.image} alt={space.name} fill className="object-cover transition-transform duration-300 group-hover:scale-105" />
                 </div>
-                <h3 className="text-center mt-3 font-semibold text-charcoal group-hover:text-primary transition-colors">{space.name}</h3>
+                <h3 className="text-center mt-3 font-semibold text-charcoal group-hover:text-primary transition-colors duration-300 transform group-hover:scale-105">{space.name}</h3>
               </div>
             ))}
           </div>

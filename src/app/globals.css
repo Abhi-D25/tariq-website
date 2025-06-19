@@ -159,3 +159,31 @@ img, .object-cover {
   .section-title { font-size: 1.5rem; }
   .section-subtitle { font-size: 1rem; }
 }
+
+/* Enhanced 3D effects for Shop by Space */
+.space-card:hover .relative {
+  filter: brightness(1.1);
+}
+
+/* Gold border with dark shadow effect */
+.space-card .group-hover\:border-gold:hover {
+  border-color: #D4AF37 !important;
+  box-shadow: 0 15px 35px rgba(44, 44, 44, 0.4), 
+              0 8px 20px rgba(44, 44, 44, 0.3),
+              0 4px 12px rgba(44, 44, 44, 0.2);
+}
+
+/* Text shadow for better readability */
+.drop-shadow-lg {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.drop-shadow-md {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Promotional banner hover effects */
+.promo-banner:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
