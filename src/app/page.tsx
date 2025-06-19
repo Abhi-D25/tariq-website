@@ -25,7 +25,7 @@ export default function Home() {
         </div>
         <div className="relative z-10 flex flex-col items-center justify-center text-center px-4">
           <h1 className="hero-title text-4xl md:text-5xl lg:text-6xl font-bold text-warmwhite drop-shadow-lg mb-6 animate-hero-title animate-hero-title-glow">Transform Your Home Into Your Dream Space</h1>
-          <p className="hero-subtitle text-xl md:text-2xl text-warmwhite mb-8 animate-hero-subtitle">Cedar Park's premier destination for luxury remodelling</p>
+          <p className="hero-subtitle text-xl md:text-2xl text-warmwhite mb-8 animate-hero-subtitle">Cedar Park&apos;s premier destination for luxury remodelling</p>
           <div className="hero-cta-group flex flex-col sm:flex-row gap-4 items-center">
             <button 
               onClick={openModal}
@@ -102,7 +102,7 @@ export default function Home() {
           <h2 className="section-title text-center mb-6">Shop by Space</h2>
           <p className="text-center text-lg text-charcoal/80 mb-12 max-w-3xl mx-auto">
             Discover our specialized tile and remodeling solutions for every area of your home. From kitchen backsplashes to luxury bathroom renovations, 
-            we offer expert installation and premium materials tailored to each space's unique requirements and design aesthetic.
+            we offer expert installation and premium materials tailored to each space&apos;s unique requirements and design aesthetic.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {[

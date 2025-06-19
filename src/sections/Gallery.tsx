@@ -36,7 +36,7 @@ export default function Gallery() {
         </div>
         <div className="gallery-overlay relative z-10 px-4 py-12 ml-4 mr-4">
           <h2 className="section-title text-warmwhite text-center">Stunning Transformations</h2>
-          <p className="section-subtitle text-warmwhite text-center">See how we've transformed Cedar Park homes</p>
+          <p className="section-subtitle text-warmwhite text-center">See how we&apos;ve transformed Cedar Park homes</p>
           <div className="before-after-grid grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
             {galleryItems.map((item, i) => (
               <div className="before-after-item bg-white/20 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg animate-fade-in-up" key={i}>

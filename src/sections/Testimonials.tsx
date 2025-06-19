@@ -50,7 +50,7 @@ export default function Testimonials() {
                   ))}
                 </div>
                 <blockquote className="italic text-warmwhite mb-4 transition-all duration-300 group-hover:text-white">
-                  "{t.quote}"
+                  &ldquo;{t.quote}&rdquo;
                 </blockquote>
                 <cite className="text-gold text-sm not-italic transition-all duration-300 group-hover:text-yellow-300 group-hover:scale-105">
                   {t.cite}
