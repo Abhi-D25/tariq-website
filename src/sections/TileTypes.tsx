@@ -71,7 +71,7 @@ export default function TileTypes() {
               <h3 className="text-2xl font-bold text-warmwhite mb-6">Premium Tile Collections</h3>
               <div className="space-y-6">
                 {tileCollections.map((tile, index) => (
-                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden hover:bg-white/20 transition-all duration-300">
+                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden hover:bg-white/20 transition-all duration-300 border border-white/20">
                     <div className="flex flex-col md:flex-row">
                       <div className="relative w-full md:w-48 h-48">
                         <Image 
@@ -82,8 +82,8 @@ export default function TileTypes() {
                         />
                       </div>
                       <div className="p-4 flex-1">
-                        <h4 className="text-warmwhite font-semibold text-lg mb-2">{tile.type}</h4>
-                        <p className="text-warmwhite/80 text-sm">{tile.description}</p>
+                        <h4 className="text-warmwhite font-bold text-lg mb-2">{tile.type}</h4>
+                        <p className="text-gold font-bold text-sm leading-relaxed">{tile.description}</p>
                       </div>
                     </div>
                   </div>
@@ -101,7 +101,7 @@ export default function TileTypes() {
               <h3 className="text-2xl font-bold text-warmwhite mb-6">Tile Finishes & Styles</h3>
               <div className="space-y-6">
                 {tileFinishes.map((finish, index) => (
-                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden hover:bg-white/20 transition-all duration-300">
+                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden hover:bg-white/20 transition-all duration-300 border border-white/20">
                     <div className="flex flex-col md:flex-row">
                       <div className="relative w-full md:w-48 h-48">
                         <Image 
@@ -112,8 +112,8 @@ export default function TileTypes() {
                         />
                       </div>
                       <div className="p-4 flex-1">
-                        <h4 className="text-warmwhite font-semibold text-lg mb-2">{finish.type}</h4>
-                        <p className="text-warmwhite/80 text-sm">{finish.description}</p>
+                        <h4 className="text-warmwhite font-bold text-lg mb-2">{finish.type}</h4>
+                        <p className="text-gold font-bold text-sm leading-relaxed">{finish.description}</p>
                       </div>
                     </div>
                   </div>

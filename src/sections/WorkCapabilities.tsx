@@ -63,12 +63,12 @@ export default function WorkCapabilities() {
             {capabilities.map((capability, index) => (
               <div 
                 key={index} 
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1"
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1 border border-white/20 shadow-lg"
               >
                 <div className="flex flex-col items-center text-center">
                   <span className="text-3xl mb-3">{capability.icon}</span>
-                  <h3 className="text-warmwhite font-semibold mb-2">{capability.title}</h3>
-                  <p className="text-warmwhite/80 text-sm text-gold font-bold">{capability.description}</p>
+                  <h3 className="text-warmwhite font-bold mb-2 text-center">{capability.title}</h3>
+                  <p className="text-gold font-bold text-sm text-center leading-relaxed">{capability.description}</p>
                 </div>
               </div>
             ))}
