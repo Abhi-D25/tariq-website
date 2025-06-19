@@ -6,6 +6,8 @@ import Footer from "../components/Footer";
 import Gallery from "../sections/Gallery";
 import Testimonials from "../sections/Testimonials";
 import Contact from "../sections/Contact";
+import TileTypes from "../sections/TileTypes";
+import WorkCapabilities from "../sections/WorkCapabilities";
 
 export default function Home() {
   return (
@@ -29,9 +31,9 @@ export default function Home() {
 
       {/* Services Section */}
       <section id="services" className="services-section py-20 bg-lightgray">
-        <div className="container mx-auto px-4 mt-12 max-w-4xl">
-          <h2 className="section-title text-center">Complete Remodeling Solutions</h2>
-          <p className="text-center text-lg mt-8 text-charcoal/80">
+      <div className="container mx-auto px-8 mt-12 max-w-4xl border-2 border-[#D4AF37] rounded-lg p-8 shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:shadow-[0_12px_24px_rgba(0,0,0,0.3)] transition-all duration-300 hover:-translate-y-1">
+        <h2 className="section-title text-center">Complete Remodeling Solutions</h2>
+          <p className="text-center text-lg text-charcoal/80 mt-6">
             With over 15 years of experience in Cedar Park, Tariq has built a reputation for excellence in premium tile installation and home remodeling. 
             His attention to detail and commitment to quality craftsmanship has transformed countless homes, creating beautiful, functional spaces that exceed expectations.
           </p>
@@ -109,24 +111,24 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="stats-section py-16 bg-primary">
+      <section className="stats-section py-16 bg-lightgray">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div className="stat-item">
-              <div className="text-4xl md:text-5xl font-bold text-gold mb-2">15+</div>
-              <div className="text-warmwhite text-lg">Years Experience</div>
+            <div className="stat-item bg-primary rounded-full p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="text-4xl md:text-5xl font-bold text-[#D4AF37] mb-2">15+</div>
+              <div className="text-[#D4AF37] text-lg">Years Experience</div>
             </div>
-            <div className="stat-item">
-              <div className="text-4xl md:text-5xl font-bold text-gold mb-2">500+</div>
-              <div className="text-warmwhite text-lg">Projects Completed</div>
+            <div className="stat-item bg-primary rounded-full p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="text-4xl md:text-5xl font-bold text-[#D4AF37] mb-2">500+</div>
+              <div className="text-[#D4AF37] text-lg">Projects Completed</div>
             </div>
-            <div className="stat-item">
-              <div className="text-4xl md:text-5xl font-bold text-gold mb-2">98%</div>
-              <div className="text-warmwhite text-lg">Client Satisfaction</div>
+            <div className="stat-item bg-primary rounded-full p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="text-4xl md:text-5xl font-bold text-[#D4AF37] mb-2">98%</div>
+              <div className="text-[#D4AF37] text-lg">Client Satisfaction</div>
             </div>
-            <div className="stat-item">
-              <div className="text-4xl md:text-5xl font-bold text-gold mb-2">100%</div>
-              <div className="text-warmwhite text-lg">Licensed & Insured</div>
+            <div className="stat-item bg-primary rounded-full p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="text-4xl md:text-5xl font-bold text-[#D4AF37] mb-2">100%</div>
+              <div className="text-[#D4AF37] text-lg">Licensed & Insured</div>
             </div>
           </div>
         </div>
@@ -134,6 +136,12 @@ export default function Home() {
 
       {/* Gallery Section */}
       <Gallery />
+
+      {/* Tile Types Section */}
+      <TileTypes />
+
+      {/* Work Capabilities Section */}
+      <WorkCapabilities />
 
       {/* Testimonials Section */}
       <Testimonials />

@@ -7,7 +7,7 @@ const galleryItems = [
     before: "/images/kitchen-before-1.jpg",
     after: "/images/kitchen-after-1.jpg",
     title: "Modern Kitchen Makeover",
-    desc: "Subway tile backsplash with quartz countertops",
+    desc: "Subway tiles with quartz countertops",
   },
   {
     before: "/images/bathroom-before-1.jpg",
@@ -31,7 +31,7 @@ export default function Gallery() {
           <Image src="/images/premium-tile-display.jpg" alt="Premium tile display" fill className="object-cover w-full h-full rounded-3xl" />
           <div className="absolute inset-0 bg-darkoverlay rounded-3xl" />
         </div>
-        <div className="gallery-overlay relative z-10 px-4 py-12">
+        <div className="gallery-overlay relative z-10 px-4 py-12 ml-4 mr-4">
           <h2 className="section-title text-warmwhite text-center">Stunning Transformations</h2>
           <p className="section-subtitle text-warmwhite text-center">See how we've transformed Cedar Park homes</p>
           <div className="before-after-grid grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">

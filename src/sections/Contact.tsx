@@ -10,7 +10,7 @@ export default function Contact() {
       <div className="contact-overlay relative z-10 container mx-auto px-4">
         <div className="contact-content flex flex-col md:flex-row gap-12">
           {/* Contact Info */}
-          <div className="contact-info bg-white/10 rounded-xl p-8 flex-1 text-warmwhite shadow-lg animate-fade-in-up">
+          <div className="contact-info bg-white/30 rounded-xl p-8 flex-1 text-warmwhite shadow-lg animate-fade-in-up">
             <h2 className="text-2xl font-bold mb-4">Visit Our Cedar Park Showroom</h2>
             <div className="contact-details space-y-4">
               <div className="contact-item">
@@ -28,7 +28,7 @@ export default function Contact() {
             </div>
           </div>
           {/* Contact Form */}
-          <div className="contact-form bg-white/10 rounded-xl p-8 flex-1 shadow-lg animate-fade-in-up">
+          <div className="contact-form bg-white/30 rounded-xl p-8 flex-1 shadow-lg animate-fade-in-up">
             <h3 className="text-xl font-bold text-gold mb-4">Schedule Your Free Consultation</h3>
             <form className="consultation-form space-y-4">
               <div className="form-row flex gap-4">
