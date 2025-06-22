@@ -9,7 +9,7 @@ import StaggeredAnimation from "../components/StaggeredAnimation";
 import Gallery from "../sections/Gallery";
 import Testimonials from "../sections/Testimonials";
 import Contact from "../sections/Contact";
-import TileTypes from "../sections/TileTypes";
+import TileTypes from "../sections/FlooringMaterials";
 import WorkCapabilities from "../sections/WorkCapabilities";
 import { useModal } from "../context/ModalContext";
 
@@ -45,7 +45,7 @@ export default function Home() {
               onClick={openModal}
               className="tertiary-btn border-2 border-warmwhite text-warmwhite px-8 py-4 rounded-full font-semibold hover:bg-warmwhite hover:text-charcoal transition-all duration-300 transform hover:scale-105 animate-hero-cta-delay-2"
             >
-              Browse Tile Collection
+              Browse Flooring Materials
             </button>
           </div>
         </div>
@@ -70,7 +70,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70" />
                 <div className="absolute inset-0 flex flex-col justify-center items-start p-8">
                   <h3 className="text-3xl font-bold text-warmwhite mb-2 drop-shadow-lg">New Arrivals</h3>
-                  <p className="text-warmwhite text-lg mb-4 font-semibold drop-shadow-md">Latest tile collections now available</p>
+                  <p className="text-warmwhite text-lg mb-4 font-semibold drop-shadow-md">Latest flooring materials now available</p>
                   <button 
                     onClick={openModal}
                     className="bg-gold text-charcoal px-6 py-3 rounded-full font-bold hover:bg-warmwhite hover:shadow-lg transition-all duration-300 transform hover:scale-105 border-2 border-gold"
@@ -137,7 +137,7 @@ export default function Home() {
         <Gallery />
       </ScrollAnimation>
 
-      {/* Tile Types Section */}
+      {/* Flooring Materials Section */}
       <ScrollAnimation animation="fade-in-up" threshold={0.1}>
         <TileTypes />
       </ScrollAnimation>

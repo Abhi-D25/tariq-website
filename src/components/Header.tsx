@@ -15,9 +15,9 @@ export default function Header() {
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-4 md:px-8">
         <Link href="/" className="logo text-2xl font-bold tracking-tight text-warmwhite drop-shadow hover-scale">FloorNDesign</Link>
-        <nav className="hidden md:flex gap-8 text-base font-semibold">
+        <nav className="hidden md:flex gap-6 text-sm font-semibold">
           <Link href="/" className="text-warmwhite hover:text-gold hover:underline underline-offset-8 hover:font-bold transition-all duration-300 transform hover:translate-y-[-2px]">Home</Link>
-          <Link href="/#services" className="text-warmwhite hover:text-gold hover:underline underline-offset-8 hover:font-bold transition-all duration-300 transform hover:translate-y-[-2px]">Services</Link>
+          <Link href="/#flooring-materials" className="text-warmwhite hover:text-gold hover:underline underline-offset-8 hover:font-bold transition-all duration-300 transform hover:translate-y-[-2px]">Materials</Link>
           <Link href="/#gallery" className="text-warmwhite hover:text-gold hover:underline underline-offset-8 hover:font-bold transition-all duration-300 transform hover:translate-y-[-2px]">Gallery</Link>
           <Link href="/about" className="text-warmwhite hover:text-gold hover:underline underline-offset-8 hover:font-bold transition-all duration-300 transform hover:translate-y-[-2px]">About</Link>
           <Link href="/#contact" className="text-warmwhite hover:text-gold hover:underline underline-offset-8 hover:font-bold transition-all duration-300 transform hover:translate-y-[-2px]">Contact</Link>
@@ -44,7 +44,10 @@ export default function Header() {
         <nav className="md:hidden bg-[rgba(44,44,44,0.95)] border-t-4 border-gold px-4 py-6 flex flex-col gap-4 text-base font-semibold shadow-2xl rounded-b-2xl animate-fade-in-down">
           <Link href="/" className="text-warmwhite hover:text-gold hover:underline underline-offset-8 hover:font-bold transition-all duration-300 transform hover:translate-x-2" onClick={() => setOpen(false)}>Home</Link>
           <Link href="/#services" className="text-warmwhite hover:text-gold hover:underline underline-offset-8 hover:font-bold transition-all duration-300 transform hover:translate-x-2" onClick={() => setOpen(false)}>Services</Link>
+          <Link href="/#flooring-materials" className="text-warmwhite hover:text-gold hover:underline underline-offset-8 hover:font-bold transition-all duration-300 transform hover:translate-x-2" onClick={() => setOpen(false)}>Materials</Link>
           <Link href="/#gallery" className="text-warmwhite hover:text-gold hover:underline underline-offset-8 hover:font-bold transition-all duration-300 transform hover:translate-x-2" onClick={() => setOpen(false)}>Gallery</Link>
+          <Link href="/#work-capabilities" className="text-warmwhite hover:text-gold hover:underline underline-offset-8 hover:font-bold transition-all duration-300 transform hover:translate-x-2" onClick={() => setOpen(false)}>Capabilities</Link>
+          <Link href="/#testimonials" className="text-warmwhite hover:text-gold hover:underline underline-offset-8 hover:font-bold transition-all duration-300 transform hover:translate-x-2" onClick={() => setOpen(false)}>Reviews</Link>
           <Link href="/about" className="text-warmwhite hover:text-gold hover:underline underline-offset-8 hover:font-bold transition-all duration-300 transform hover:translate-x-2" onClick={() => setOpen(false)}>About</Link>
           <Link href="/#contact" className="text-warmwhite hover:text-gold hover:underline underline-offset-8 hover:font-bold transition-all duration-300 transform hover:translate-x-2" onClick={() => setOpen(false)}>Contact</Link>
           <button 
