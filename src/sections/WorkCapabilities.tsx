@@ -48,7 +48,7 @@ const capabilities = [
 export default function WorkCapabilities() {
   return (
     <section id="work-capabilities" className="work-capabilities-section relative py-20 animate-fade-in flex justify-center">
-      <div className="relative w-full max-w-6xl rounded-3xl overflow-hidden shadow-xl">
+      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 rounded-3xl overflow-hidden shadow-xl">
         <div className="absolute inset-0 w-full h-full">
           <Image 
             src="/images/renovation-workspace.jpg" 
@@ -58,8 +58,8 @@ export default function WorkCapabilities() {
           />
           <div className="absolute inset-0 bg-darkoverlay" />
         </div>
-        <div className="relative z-10 p-8 md:p-12">
-          <h2 className="text-3xl font-bold text-warmwhite text-center mb-8">Complete Remodeling Expertise</h2>
+        <div className="relative z-10 p-6 sm:p-8 md:p-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-warmwhite text-center mb-8">Complete Remodeling Expertise</h2>
           <StaggeredAnimation animation="scale-in" staggerDelay={100} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {capabilities.map((capability, index) => (
               <div 

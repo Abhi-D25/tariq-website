@@ -30,15 +30,15 @@ export default function Gallery() {
 
   return (
     <section id="gallery" className="gallery-section relative py-20 animate-fade-in flex justify-center">
-      <div className="relative w-full max-w-6xl rounded-3xl overflow-hidden shadow-xl">
+      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 rounded-3xl overflow-hidden shadow-xl">
         <div className="absolute inset-0 w-full h-full rounded-3xl overflow-hidden">
           <Image src="/images/premium-tile-display.jpg" alt="Premium tile display" fill className="object-cover w-full h-full rounded-3xl" />
           <div className="absolute inset-0 bg-darkoverlay rounded-3xl" />
         </div>
-        <div className="gallery-overlay relative z-10 px-4 py-12 ml-4 mr-4">
+        <div className="gallery-overlay relative z-10 px-4 sm:px-6 py-12">
           <h2 className="section-title text-warmwhite text-center">Stunning Transformations</h2>
           <p className="section-subtitle text-warmwhite text-center">See how we&apos;ve transformed Cedar Park homes</p>
-          <StaggeredAnimation animation="fade-in-up" staggerDelay={200} className="before-after-grid grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+          <StaggeredAnimation animation="fade-in-up" staggerDelay={200} className="before-after-grid grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mt-10">
             {galleryItems.map((item, i) => (
               <div className="before-after-item bg-white/20 backdrop-blur-sm rounded-xl overflow-hidden shadow-lg" key={i}>
                 <BeforeAfterHover before={item.before} after={item.after} title={item.title} />

@@ -74,27 +74,27 @@ export default function TileTypes() {
 
   return (
     <section id="tile-types" className="tile-types-section relative py-20 animate-fade-in flex justify-center">
-      <div className="relative w-full max-w-6xl">
+      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4">
             Tile Collection
           </h2>
-          <p className="text-center text-lg text-charcoal/80 mb-12 max-w-3xl mx-auto">
+          <p className="text-center text-base sm:text-lg text-charcoal/80 mb-12 max-w-3xl mx-auto">
             Discover our extensive range of premium tiles and finishes, carefully curated to transform your space with elegance and durability
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 lg:gap-12">
           {/* Premium Tile Collections */}
           <div className="relative rounded-3xl overflow-hidden shadow-xl" style={{ background: 'linear-gradient(90deg, #2C2C2C 60%, #8B1538 100%)' }}>
-            <div className="relative z-10 p-8">
-              <h3 className="text-2xl font-bold text-warmwhite mb-6">Premium Tile Collections</h3>
+            <div className="relative z-10 p-6 sm:p-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-warmwhite mb-6">Premium Tile Collections</h3>
               <StaggeredAnimation animation="slide-in-left" staggerDelay={150} className="space-y-6">
                 {tileCollections.map((tile, index) => (
                   <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden hover:bg-white/20 transition-all duration-300 border border-white/20 relative">
-                    <div className="flex flex-col md:flex-row">
-                      <div className="relative w-full md:w-48 h-48">
+                    <div className="flex flex-col lg:flex-row">
+                      <div className="relative w-full lg:w-48 h-48 lg:h-48">
                         <Image 
                           src={tile.image} 
                           alt={tile.type} 
@@ -128,13 +128,13 @@ export default function TileTypes() {
 
           {/* Tile Finishes & Styles */}
           <div className="relative rounded-3xl overflow-hidden shadow-xl" style={{ background: 'linear-gradient(90deg, #2C2C2C 60%, #8B1538 100%)' }}>
-            <div className="relative z-10 p-8">
-              <h3 className="text-2xl font-bold text-warmwhite mb-6">Tile Finishes & Styles</h3>
+            <div className="relative z-10 p-6 sm:p-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-warmwhite mb-6">Tile Finishes & Styles</h3>
               <StaggeredAnimation animation="slide-in-right" staggerDelay={150} className="space-y-6">
                 {tileFinishes.map((finish, index) => (
                   <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden hover:bg-white/20 transition-all duration-300 border border-white/20 relative">
-                    <div className="flex flex-col md:flex-row">
-                      <div className="relative w-full md:w-48 h-48">
+                    <div className="flex flex-col lg:flex-row">
+                      <div className="relative w-full lg:w-48 h-48 lg:h-48">
                         <Image 
                           src={finish.image} 
                           alt={finish.type} 

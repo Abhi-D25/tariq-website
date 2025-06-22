@@ -15,11 +15,11 @@ export default function Contact() {
           <Image src="/images/modern-exterior-showroom.jpg" alt="FloorNDesign showroom exterior" fill className="object-cover w-full h-full" />
           <div className="absolute inset-0 bg-darkoverlay" />
         </div>
-        <div className="contact-overlay relative z-10 container mx-auto px-4">
-          <StaggeredAnimation animation="slide-in-left" staggerDelay={300} className="contact-content flex flex-col md:flex-row gap-12">
+        <div className="contact-overlay relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <StaggeredAnimation animation="slide-in-left" staggerDelay={300} className="contact-content flex flex-col lg:flex-row gap-8 lg:gap-12">
             {/* Contact Info */}
-            <div className="contact-info bg-white/30 rounded-xl p-8 flex-1 text-warmwhite shadow-lg">
-              <h2 className="text-2xl font-bold mb-4">Visit Our Cedar Park Showroom</h2>
+            <div className="contact-info bg-white/30 rounded-xl p-6 sm:p-8 flex-1 text-warmwhite shadow-lg">
+              <h2 className="text-xl sm:text-2xl font-bold mb-4">Visit Our Cedar Park Showroom</h2>
               <div className="contact-details space-y-4">
                 <div className="contact-item">
                   <h4 className="font-semibold text-gold mb-1">📍 Address</h4>
@@ -43,40 +43,40 @@ export default function Contact() {
               </button>
             </div>
             {/* Contact Form */}
-            <div className="contact-form bg-white/30 rounded-xl p-8 flex-1 shadow-lg">
-              <h3 className="text-xl font-bold text-gold mb-4">Schedule Your Free Consultation</h3>
+            <div className="contact-form bg-white/30 rounded-xl p-6 sm:p-8 flex-1 shadow-lg">
+              <h3 className="text-lg sm:text-xl font-bold text-gold mb-4">Schedule Your Free Consultation</h3>
               <form className="consultation-form space-y-4">
-                <div className="form-row flex gap-4">
+                <div className="form-row flex flex-col sm:flex-row gap-4">
                   <input 
                     type="text" 
                     placeholder="First Name" 
                     required 
-                    className="flex-1 px-4 py-2 rounded bg-white/80 text-charcoal focus:outline-none focus:ring-2 focus:ring-gold transition-all duration-300 transform hover:scale-[1.02] focus:scale-[1.02]" 
+                    className="flex-1 px-4 py-3 rounded bg-white/80 text-charcoal focus:outline-none focus:ring-2 focus:ring-gold transition-all duration-300 transform hover:scale-[1.02] focus:scale-[1.02]" 
                   />
                   <input 
                     type="text" 
                     placeholder="Last Name" 
                     required 
-                    className="flex-1 px-4 py-2 rounded bg-white/80 text-charcoal focus:outline-none focus:ring-2 focus:ring-gold transition-all duration-300 transform hover:scale-[1.02] focus:scale-[1.02]" 
+                    className="flex-1 px-4 py-3 rounded bg-white/80 text-charcoal focus:outline-none focus:ring-2 focus:ring-gold transition-all duration-300 transform hover:scale-[1.02] focus:scale-[1.02]" 
                   />
                 </div>
-                <div className="form-row flex gap-4">
+                <div className="form-row flex flex-col sm:flex-row gap-4">
                   <input 
                     type="email" 
                     placeholder="Email Address" 
                     required 
-                    className="flex-1 px-4 py-2 rounded bg-white/80 text-charcoal focus:outline-none focus:ring-2 focus:ring-gold transition-all duration-300 transform hover:scale-[1.02] focus:scale-[1.02]" 
+                    className="flex-1 px-4 py-3 rounded bg-white/80 text-charcoal focus:outline-none focus:ring-2 focus:ring-gold transition-all duration-300 transform hover:scale-[1.02] focus:scale-[1.02]" 
                   />
                   <input 
                     type="tel" 
                     placeholder="Phone Number" 
                     required 
-                    className="flex-1 px-4 py-2 rounded bg-white/80 text-charcoal focus:outline-none focus:ring-2 focus:ring-gold transition-all duration-300 transform hover:scale-[1.02] focus:scale-[1.02]" 
+                    className="flex-1 px-4 py-3 rounded bg-white/80 text-charcoal focus:outline-none focus:ring-2 focus:ring-gold transition-all duration-300 transform hover:scale-[1.02] focus:scale-[1.02]" 
                   />
                 </div>
                 <select 
                   required 
-                  className="w-full px-4 py-2 rounded bg-white/80 text-charcoal focus:outline-none focus:ring-2 focus:ring-gold transition-all duration-300 transform hover:scale-[1.02] focus:scale-[1.02]"
+                  className="w-full px-4 py-3 rounded bg-white/80 text-charcoal focus:outline-none focus:ring-2 focus:ring-gold transition-all duration-300 transform hover:scale-[1.02] focus:scale-[1.02]"
                 >
                   <option value="">Project Type</option>
                   <option value="kitchen">Kitchen Remodeling</option>
@@ -88,7 +88,7 @@ export default function Contact() {
                 <textarea 
                   placeholder="Tell us about your project..." 
                   rows={4} 
-                  className="w-full px-4 py-2 rounded bg-white/80 text-charcoal focus:outline-none focus:ring-2 focus:ring-gold transition-all duration-300 transform hover:scale-[1.02] focus:scale-[1.02]" 
+                  className="w-full px-4 py-3 rounded bg-white/80 text-charcoal focus:outline-none focus:ring-2 focus:ring-gold transition-all duration-300 transform hover:scale-[1.02] focus:scale-[1.02]" 
                 />
                 <button 
                   type="submit" 

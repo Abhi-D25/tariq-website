@@ -26,14 +26,14 @@ const features = [
 export default function WhyChooseUs() {
   return (
     <section id="why-choose-us" className="why-choose-section relative py-20 animate-fade-in flex justify-center">
-      <div className="relative w-full max-w-6xl rounded-3xl overflow-hidden shadow-xl">
+      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 rounded-3xl overflow-hidden shadow-xl">
         <div className="absolute inset-0 w-full h-full rounded-3xl overflow-hidden">
           <Image src="/images/elegant-showroom.jpg" alt="FloorNDesign showroom" fill className="object-cover w-full h-full rounded-3xl" />
           <div className="absolute inset-0 bg-darkoverlay rounded-3xl" />
         </div>
-        <div className="why-choose-overlay relative z-10 px-4 py-12">
+        <div className="why-choose-overlay relative z-10 px-4 sm:px-6 py-12">
           <h2 className="section-title text-warmwhite text-center">Why Cedar Park Trusts FloorNDesign</h2>
-          <div className="features-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
+          <div className="features-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mt-10">
             {features.map((f, i) => (
               <div className="feature-item bg-white/10 rounded-xl p-6 flex flex-col items-center text-center shadow-lg animate-fade-in-up" key={i}>
                 <div className="feature-icon text-4xl mb-4">{f.icon}</div>

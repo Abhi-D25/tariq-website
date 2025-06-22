@@ -62,7 +62,7 @@ export default function Home() {
       {/* Promotional Banners */}
       <ScrollAnimation animation="fade-in-up" threshold={0.2}>
         <section className="promotional-banners py-16 bg-warmwhite">
-          <div className="container mx-auto px-4">
+          <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <StaggeredAnimation animation="slide-in-left" staggerDelay={150} className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* New Arrivals Banner */}
               <div className="promo-banner relative h-64 rounded-xl overflow-hidden shadow-lg group">
@@ -103,10 +103,10 @@ export default function Home() {
       {/* Shop by Space Section */}
       <ScrollAnimation animation="fade-in-up" threshold={0.15}>
         <section className="shop-by-space py-20 bg-warmwhite">
-          <div className="container mx-auto px-4">
+          <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollAnimation animation="fade-in-down" delay={200}>
-              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-8 text-center">Shop by Space</h2>
-              <p className="text-center text-lg text-charcoal/80 mb-12 max-w-3xl mx-auto">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-8 text-center">Shop by Space</h2>
+              <p className="text-center text-base sm:text-lg text-charcoal/80 mb-12 max-w-3xl mx-auto">
                 Discover our specialized tile and remodeling solutions for every area of your home. From kitchen backsplashes to luxury bathroom renovations, 
                 we offer expert installation and premium materials tailored to each space&apos;s unique requirements and design aesthetic.
               </p>
@@ -121,10 +121,10 @@ export default function Home() {
                 { name: "Flooring", image: "/images/tile-installation-process.jpg" }
               ].map((space, index) => (
                 <div key={index} className="space-card group cursor-pointer" onClick={openModal}>
-                  <div className="relative h-32 w-32 mx-auto rounded-full overflow-hidden shadow-lg group-hover:shadow-2xl transition-all duration-300 transform group-hover:scale-110 group-hover:-translate-y-2 border-4 border-transparent group-hover:border-gold group-hover:shadow-[0_15px_35px_rgba(44,44,44,0.4)]">
+                  <div className="relative h-32 sm:h-36 md:h-40 w-32 sm:w-36 md:w-40 mx-auto rounded-full overflow-hidden shadow-lg group-hover:shadow-2xl transition-all duration-300 transform group-hover:scale-110 group-hover:-translate-y-2 border-4 border-transparent group-hover:border-gold group-hover:shadow-[0_15px_35px_rgba(44,44,44,0.4)]">
                     <Image src={space.image} alt={space.name} fill className="object-cover transition-transform duration-300 group-hover:scale-105" />
                   </div>
-                  <h3 className="text-center mt-3 font-semibold text-charcoal group-hover:text-primary transition-colors duration-300 transform group-hover:scale-105">{space.name}</h3>
+                  <h3 className="text-center mt-4 font-semibold text-charcoal group-hover:text-primary transition-colors duration-300 transform group-hover:scale-105 text-sm sm:text-base">{space.name}</h3>
                 </div>
               ))}
             </StaggeredAnimation>
@@ -145,13 +145,13 @@ export default function Home() {
       {/* Featured Collections Section */}
       <ScrollAnimation animation="fade-in-up" threshold={0.15}>
         <section className="featured-collections py-16 bg-warmwhite">
-          <div className="container mx-auto px-4">
+          <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Header and Description */}
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4">
                 Featured Collections
               </h2>
-              <p className="text-center text-lg text-charcoal/80 mb-12 max-w-3xl mx-auto">
+              <p className="text-center text-base sm:text-lg text-charcoal/80 mb-12 max-w-3xl mx-auto">
                 Discover our handpicked selection of premium tiles, from American-made craftsmanship to designer discounts and the latest arrivals in luxury flooring
               </p>
             </div>
@@ -217,15 +217,15 @@ export default function Home() {
       {/* Services Section */}
       <ScrollAnimation animation="fade-in-up" threshold={0.15}>
         <section id="services" className="services-section py-20 bg-warmwhite">
-          <div className="container mx-auto px-8 mt-12 max-w-4xl border-2 border-[#D4AF37] rounded-lg p-8 shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:shadow-[0_12px_24px_rgba(0,0,0,0.3)] transition-all duration-300 hover:-translate-y-1">
+          <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 border-2 border-[#D4AF37] rounded-lg p-6 sm:p-8 shadow-[0_8px_16px_rgba(0,0,0,0.2)] hover:shadow-[0_12px_24px_rgba(0,0,0,0.3)] transition-all duration-300 hover:-translate-y-1">
             <ScrollAnimation animation="fade-in-down" delay={300}>
               <h2 className="section-title text-center">Complete Remodeling Solutions</h2>
-              <p className="text-center text-lg text-charcoal/80 mt-6">
+              <p className="text-center text-base sm:text-lg text-charcoal/80 mt-6">
                 With over 15 years of experience in Cedar Park, Tariq has built a reputation for excellence in premium tile installation and home remodeling. 
                 His attention to detail and commitment to quality craftsmanship has transformed countless homes, creating beautiful, functional spaces that exceed expectations.
               </p>
             </ScrollAnimation>
-            <StaggeredAnimation animation="fade-in-up" staggerDelay={150} className="services-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
+            <StaggeredAnimation animation="fade-in-up" staggerDelay={150} className="services-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mt-10">
               {/* Service 1 */}
               <div className="service-card relative rounded-xl overflow-hidden shadow-lg group hover-lift">
                 <Image src="/images/premium-tile-display.jpg" alt="Premium tile selection" fill className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out" />
@@ -322,23 +322,23 @@ export default function Home() {
       {/* Stats Section */}
       <ScrollAnimation animation="fade-in-up" threshold={0.2}>
         <section className="stats-section py-16 bg-lightgray">
-          <div className="container mx-auto px-4">
-            <StaggeredAnimation animation="scale-in" staggerDelay={100} className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <div className="stat-item bg-primary rounded-full p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="text-4xl md:text-5xl font-bold text-[#D4AF37] mb-2">15+</div>
-                <div className="text-[#D4AF37] text-lg">Years Experience</div>
+          <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <StaggeredAnimation animation="scale-in" staggerDelay={100} className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">
+              <div className="stat-item bg-primary rounded-full p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#D4AF37] mb-2">15+</div>
+                <div className="text-[#D4AF37] text-base sm:text-lg">Years Experience</div>
               </div>
-              <div className="stat-item bg-primary rounded-full p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="text-4xl md:text-5xl font-bold text-[#D4AF37] mb-2">500+</div>
-                <div className="text-[#D4AF37] text-lg">Projects Completed</div>
+              <div className="stat-item bg-primary rounded-full p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#D4AF37] mb-2">500+</div>
+                <div className="text-[#D4AF37] text-base sm:text-lg">Projects Completed</div>
               </div>
-              <div className="stat-item bg-primary rounded-full p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="text-4xl md:text-5xl font-bold text-[#D4AF37] mb-2">98%</div>
-                <div className="text-[#D4AF37] text-lg">Client Satisfaction</div>
+              <div className="stat-item bg-primary rounded-full p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#D4AF37] mb-2">98%</div>
+                <div className="text-[#D4AF37] text-base sm:text-lg">Client Satisfaction</div>
               </div>
-              <div className="stat-item bg-primary rounded-full p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="text-4xl md:text-5xl font-bold text-[#D4AF37] mb-2">100%</div>
-                <div className="text-[#D4AF37] text-lg">Licensed & Insured</div>
+              <div className="stat-item bg-primary rounded-full p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#D4AF37] mb-2">100%</div>
+                <div className="text-[#D4AF37] text-base sm:text-lg">Licensed & Insured</div>
               </div>
             </StaggeredAnimation>
           </div>
