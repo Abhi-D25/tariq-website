@@ -10,7 +10,6 @@ import Gallery from "../sections/Gallery";
 import Testimonials from "../sections/Testimonials";
 import Contact from "../sections/Contact";
 import TileTypes from "../sections/FlooringMaterials";
-import WorkCapabilities from "../sections/WorkCapabilities";
 import { useModal } from "../context/ModalContext";
 
 export default function Home() {
@@ -207,11 +206,6 @@ export default function Home() {
             </StaggeredAnimation>
           </div>
         </section>
-      </ScrollAnimation>
-
-      {/* Work Capabilities Section */}
-      <ScrollAnimation animation="fade-in-up" threshold={0.1}>
-        <WorkCapabilities />
       </ScrollAnimation>
 
       {/* Services Section */}

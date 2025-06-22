@@ -33,7 +33,7 @@ const FlooringMaterials = () => {
       benefits: ['Water resistant', 'Easy maintenance', 'Durable', 'Versatile designs'],
       priceRange: '$2.99 - $35.00/sq ft',
       image: '/images/tiles/ceramic-tile.jpg',
-      bgImage: '/images/tiles/ceramic-tile.jpg'
+      bgImage: '/images/materials/tile-overview.jpg'
     },
     {
       id: 'stone',
@@ -42,7 +42,7 @@ const FlooringMaterials = () => {
       benefits: ['Unique patterns', 'Luxurious appeal', 'Increases home value', 'Long-lasting'],
       priceRange: '$8.99 - $45.00/sq ft',
       image: '/images/tiles/natural-stone.jpg',
-      bgImage: '/images/tiles/natural-stone.jpg'
+      bgImage: '/images/materials/stone-overview.jpg'
     },
     {
       id: 'vinyl',
@@ -51,7 +51,7 @@ const FlooringMaterials = () => {
       benefits: ['100% waterproof', 'Comfortable underfoot', 'Easy installation', 'Pet-friendly'],
       priceRange: '$3.25 - $12.99/sq ft',
       image: '/images/tiles/luxury-vinyl.jpg',
-      bgImage: '/images/tiles/luxury-vinyl.jpg'
+      bgImage: '/images/materials/vinyl-overview.jpg'
     },
     {
       id: 'wood',
@@ -60,7 +60,7 @@ const FlooringMaterials = () => {
       benefits: ['Timeless beauty', 'Can be refinished', 'Adds warmth', 'Classic appeal'],
       priceRange: '$6.50 - $18.00/sq ft',
       image: '/images/finishes/wood-look.jpg',
-      bgImage: '/images/finishes/wood-look.jpg'
+      bgImage: '/images/materials/wood-overview.jpg'
     },
     {
       id: 'laminate',
@@ -69,7 +69,7 @@ const FlooringMaterials = () => {
       benefits: ['Budget-friendly', 'Easy maintenance', 'Scratch resistant', 'Quick installation'],
       priceRange: '$2.75 - $8.50/sq ft',
       image: '/images/finishes/wood-look.jpg',
-      bgImage: '/images/finishes/wood-look.jpg'
+      bgImage: '/images/materials/laminate-overview.jpg'
     }
   ];
 
@@ -372,20 +372,21 @@ const FlooringMaterials = () => {
 
         {/* Material Overview */}
         <div className="mb-12">
-          <div className="bg-gray-50 rounded-2xl p-8 shadow-lg border-2 border-gold/20 text-center relative overflow-hidden" style={{ 
-            backgroundImage: `repeating-linear-gradient(
-              45deg,
-              transparent,
-              transparent 10px,
-              rgba(139, 21, 56, 0.03) 10px,
-              rgba(139, 21, 56, 0.03) 20px
-            )`
-          }}>
+          <div className="rounded-2xl p-8 shadow-lg border-2 border-gold/20 text-center relative overflow-hidden">
+            {/* Background Image with Transparency */}
+            <div className="absolute inset-0 opacity-80">
+              <Image 
+                src={materials.find(m => m.id === selectedMaterial)?.bgImage || '/images/materials/tile-overview.jpg'} 
+                alt={`${materials.find(m => m.id === selectedMaterial)?.name} overview`} 
+                fill 
+                className="object-cover"
+              />
+            </div>
             <div className="relative z-10">
-              <h3 className="text-2xl font-bold text-primary mb-2">
+              <h3 className="text-2xl font-bold text-warmwhite mb-2">
                 {materials.find(m => m.id === selectedMaterial)?.name}
               </h3>
-              <p className="text-charcoal/80 mb-4 max-w-2xl mx-auto">
+              <p className="text-gold font-bold mb-4 max-w-2xl mx-auto">
                 {materials.find(m => m.id === selectedMaterial)?.description}
               </p>
               <div className="bg-gold text-charcoal px-6 py-2 rounded-full font-bold text-lg inline-block mb-6">
@@ -395,7 +396,7 @@ const FlooringMaterials = () => {
               {/* Benefits */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
                 {materials.find(m => m.id === selectedMaterial)?.benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center gap-2 text-charcoal">
+                  <div key={index} className="flex items-center gap-2 text-warmwhite">
                     <span className="text-gold text-xl">✓</span>
                     <span className="text-sm font-medium">{benefit}</span>
                   </div>

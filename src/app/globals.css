@@ -18,7 +18,7 @@ html {
 body {
   background: var(--light-tan);
   color: var(--charcoal);
-  font-family: 'Inter', 'Poppins', ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-inter), var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
   min-height: 100vh;
   line-height: 1.6;
 }

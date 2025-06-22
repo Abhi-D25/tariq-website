@@ -21,6 +21,7 @@ const ScrollAnimation: React.FC<ScrollAnimationProps> = ({
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const currentRef = ref.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimated) {
@@ -36,13 +37,13 @@ const ScrollAnimation: React.FC<ScrollAnimationProps> = ({
       }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, [delay, threshold, hasAnimated]);

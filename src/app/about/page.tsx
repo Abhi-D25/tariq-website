@@ -4,6 +4,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import WhyChooseUs from "../../sections/WhyChooseUs";
 import Process from "../../sections/Process";
+import WorkCapabilities from "../../sections/WorkCapabilities";
 
 export default function About() {
   return (
@@ -23,6 +24,8 @@ export default function About() {
 
       {/* Why Choose Us Section */}
       <WhyChooseUs />
+
+      <WorkCapabilities />
 
       {/* Process Section */}
       <Process />
