@@ -32,8 +32,8 @@ export default function Contact() {
     setIsSubmitting(true);
     setSubmitError('');
 
-    // Prepare data for Zapier
-    const zapierData = {
+    // Prepare data for our API route
+    const submissionData = {
       firstName: formData.firstName,
       lastName: formData.lastName,
       fullName: `${formData.firstName} ${formData.lastName}`,
@@ -50,18 +50,18 @@ export default function Contact() {
     };
 
     try {
-      // Replace with your actual Zapier webhook URL
-      const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/21745522/uo07zl6/';
-      
-      const response = await fetch(ZAPIER_WEBHOOK_URL, {
+      // Send to our API route (which then sends to Zapier)
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(zapierData)
+        body: JSON.stringify(submissionData)
       });
 
-      if (response.ok) {
+      const result = await response.json();
+
+      if (response.ok && result.success) {
         setIsSubmitted(true);
         // Reset form after successful submission
         setFormData({
@@ -78,7 +78,7 @@ export default function Contact() {
           setIsSubmitted(false);
         }, 5000);
       } else {
-        throw new Error('Failed to submit form');
+        throw new Error(result.error || 'Failed to submit form');
       }
     } catch (error) {
       console.error('Form submission error:', error);
@@ -133,7 +133,7 @@ export default function Contact() {
                   <div className="text-green-400 text-6xl mb-4">✓</div>
                   <h4 className="text-xl font-bold text-warmwhite mb-2">Thank You!</h4>
                   <p className="text-warmwhite mb-4">
-                    We&apos;ve received your request and will contact you within 24 hours to schedule your free consultation.
+                    We've received your request and will contact you within 24 hours to schedule your free consultation.
                   </p>
                   <button 
                     onClick={() => setIsSubmitted(false)}
