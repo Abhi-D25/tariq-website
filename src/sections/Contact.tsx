@@ -133,7 +133,7 @@ export default function Contact() {
                   <div className="text-green-400 text-6xl mb-4">✓</div>
                   <h4 className="text-xl font-bold text-warmwhite mb-2">Thank You!</h4>
                   <p className="text-warmwhite mb-4">
-                    We've received your request and will contact you within 24 hours to schedule your free consultation.
+                    We&apos;ve received your request and will contact you within 24 hours to schedule your free consultation.
                   </p>
                   <button 
                     onClick={() => setIsSubmitted(false)}

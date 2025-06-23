@@ -141,7 +141,7 @@ export default function FormModal({
               <div className="text-green-500 text-6xl mb-4">✓</div>
               <h3 className="text-xl font-bold text-primary mb-2">Thank You!</h3>
               <p className="text-charcoal mb-4">
-                We've received your request and will contact you within 24 hours to schedule your free consultation.
+                We&apos;ve received your request and will contact you within 24 hours to schedule your free consultation.
               </p>
               <p className="text-sm text-charcoal/70">
                 This window will close automatically...

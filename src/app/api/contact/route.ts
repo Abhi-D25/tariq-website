@@ -1,8 +1,46 @@
 // src/app/api/contact/route.ts
 
+// Define proper TypeScript interfaces
+interface FormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  projectType: string;
+  message: string;
+  formType?: string;
+  page?: string;
+  utmSource?: string;
+  utmMedium?: string;
+}
+
+interface AirtableData {
+  "Lead Name": string;
+  "Phone Number": string;
+  "Email": string;
+  "Project Type": string;
+  "Lead Source": string;
+  "Status": string;
+  "Notes": string;
+  "Follow-up Due": string;
+  "Created Date": string;
+  "_rawFormData": {
+    firstName: string;
+    lastName: string;
+    message: string;
+    formType?: string;
+    page?: string;
+    utmSource?: string;
+    utmMedium?: string;
+    userAgent?: string | null;
+    referer?: string | null;
+    ip?: string | null;
+  };
+}
+
 export async function POST(request: Request) {
     try {
-      const formData = await request.json();
+      const formData: FormData = await request.json();
       
       // Map project type values to full names
       const projectTypeMapping: { [key: string]: string } = {
@@ -19,7 +57,7 @@ export async function POST(request: Request) {
       followUpDue.setHours(followUpDue.getHours() + 24);
   
       // Format data to match your Airtable Leads table exactly
-      const airtableData = {
+      const airtableData: AirtableData = {
         // Airtable field names (use these exact names in Zapier)
         "Lead Name": `${formData.firstName} ${formData.lastName}`.trim(),
         "Phone Number": formData.phone,
@@ -78,7 +116,7 @@ export async function POST(request: Request) {
   }
   
   // Helper function to determine lead source
-  function determineLeadSource(formData: any): string {
+  function determineLeadSource(formData: FormData): string {
     // Priority order for determining lead source
     if (formData.utmSource && formData.utmSource !== 'direct') {
       // UTM source takes priority (Google Ads, Facebook, etc.)
@@ -114,7 +152,7 @@ export async function POST(request: Request) {
   }
   
   // Helper function to build comprehensive notes
-  function buildNotesField(formData: any): string {
+  function buildNotesField(formData: FormData): string {
     const notes = [];
     
     // Add user's message if provided
